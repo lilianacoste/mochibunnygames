@@ -13,7 +13,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <Mascot className="w-16 h-16" />
           <div className="flex flex-col">
             <h1 className="text-2xl font-bold text-primary tracking-tight">MochiBunny<span className="text-foreground">Games</span></h1>
-            <p className="text-sm text-muted-foreground font-mono -mt-1">est. 2024</p>
+            <p className="text-sm text-muted-foreground font-mono -mt-1">est. 2025</p>
           </div>
         </div>
         
