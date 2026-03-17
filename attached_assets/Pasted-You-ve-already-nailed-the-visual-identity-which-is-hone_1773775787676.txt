@@ -1,0 +1,227 @@
+You’ve already nailed the **visual identity** (which is honestly 🔥), but what separates a *cool site* from a **game that actually gains traction** is what you include on it.
+
+I’m gonna break this into **what you NEED vs what makes it go viral / convert players** — especially for your **MochiBunnyGames + Lottie horror contrast vibe**.
+
+---
+
+# 🌸 CORE PAGES (Must-Have)
+
+## 🏠 1. Homepage (Your Hook)
+
+This is where people decide:
+👉 “this looks cute”
+👉 “…wait why does this feel off?”
+
+**Add:**
+
+* 🎮 Featured game (Project Lottie.exe)
+* Short 1–2 line hook:
+
+  > “A cozy desktop… that’s watching you back.”
+* Play / Wishlist buttons
+* 1 unsettling GIF (subtle glitch 👀)
+
+💡 *Important:* Don’t explain too much. Mystery = clicks.
+
+---
+
+## 🎮 2. Games Page
+
+Even if you only have ONE game, still make this page.
+
+**Why?**
+It makes you look like a *studio*, not a project.
+
+**Include:**
+
+* Game card(s)
+* Status tags:
+
+  * “In Development”
+  * “Demo Available”
+* Tiny tags:
+
+  * Psychological Horror
+  * Analog Horror
+  * Puzzle
+
+---
+
+## 📓 3. Devlog (VERY IMPORTANT)
+
+This is how you:
+
+* build audience
+* show progress
+* gain trust
+
+**Add posts like:**
+
+* “Added camera anomaly system 👁️”
+* “Lottie started breaking dialogue… not intended”
+* “Audio experiment (this one creeps me out)”
+
+💡 These double as:
+👉 TikTok content
+👉 Twitter posts
+👉 Reddit devlogs
+
+---
+
+## 💬 4. Community Page
+
+Even if it's simple:
+
+* Discord link (BIG)
+* “Join the Mochi Club 🐰💌”
+
+This is where your **core fans live**
+
+---
+
+# 🔥 HIGH-CONVERSION FEATURES (What actually grows your game)
+
+## 🎥 1. Trailer Section (CRITICAL)
+
+Don’t skip this.
+
+Even a simple one:
+
+* cute desktop
+* glitch
+* text corruption
+* footsteps audio
+
+💡 Horror sells through *motion + sound*, not screenshots.
+
+---
+
+## 📸 2. Screenshot Section (BUT stylized)
+
+Not boring grid.
+
+Do:
+
+* polaroid frames
+* slight tilt
+* captions like:
+
+  * “nothing wrong here :)”
+  * “she only watches sometimes”
+
+---
+
+## 🧠 3. “What is this game?” Section
+
+Short + mysterious:
+
+> You weren’t supposed to find this desktop.
+>
+> But now that you’re here…
+>
+> it knows you are.
+
+---
+
+## 💌 4. Email / Wishlist Capture
+
+Super underrated.
+
+Add:
+
+```
+💌 Get notified when Lottie wakes up…
+[ Enter Email ]
+```
+
+OR:
+
+* Steam wishlist button (BIG priority later)
+
+---
+
+# 😈 YOUR SECRET WEAPON (Lean into this HARD)
+
+## 🌸 Cute UI → Corruption
+
+This is what will make your game stand out.
+
+Add **subtle weirdness**:
+
+* Buttons slightly shift position
+* Sparkles flicker wrong
+* Text briefly glitches
+* Bunny mascot blinks… too slow
+
+---
+
+# 🐰 EXTRA FEATURES (Next Level)
+
+## 🧁 Cursor Effects
+
+* trailing sparkles
+* BUT occasionally… one spark is black 👀
+
+---
+
+## 🖥️ Fake “Desktop Mode”
+
+Clickable fake OS:
+
+* open files
+* broken chat logs
+* hidden lore
+
+(This fits PERFECT with your current game system)
+
+---
+
+## 🧩 ARG / Hidden Secrets
+
+Hide stuff like:
+
+* clickable invisible areas
+* secret page: `/lottie`
+* weird logs like your state file:
+
+👉 You could literally surface something like:
+
+> “Log file recovered…” 
+
+That kind of meta tie-in = INSANE immersion
+
+---
+
+# 🎯 MOST IMPORTANT PRIORITIES (If you do nothing else)
+
+Do these 5:
+
+1. ✅ Featured game section
+2. ✅ Trailer (even rough)
+3. ✅ Devlog
+4. ✅ Discord link
+5. ✅ Subtle horror glitches
+
+---
+
+# 💡 Strategy (This is how you win)
+
+You’re not just making a site.
+
+You’re building:
+
+👉 **a cute indie brand**
+👉 **that slowly feels wrong**
+👉 **that pulls people into your game world BEFORE they play**
+
+That’s how games go viral now.
+
+---
+
+If you want, I can next:
+
+👉 design your **actual homepage as a full image mock (like your forum UI)**
+👉 or build **real HTML/CSS you can deploy immediately**
+👉 or help you script **a trailer that fits your Lottie vibe**
+
+Just tell me 👍

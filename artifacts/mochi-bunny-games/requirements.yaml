@@ -1,0 +1,23 @@
+packages:
+  "framer-motion": "Animations for custom cursor, shifting buttons, and glitch effects"
+  "clsx": "Utility for constructing className strings conditionally"
+  "tailwind-merge": "Utility to merge tailwind classes"
+  "canvas-confetti": "For a creepy celebration effect on the community page"
+
+images:
+  - path: "artifacts/mochi-bunny-games/public/images/hero-desktop.png"
+    description: "A highly detailed pastel pink anime aesthetic computer desktop setup. Cozy and cute, but with a subtle dark, unsettling shadowy figure barely visible in the reflection of the monitor."
+    aspect_ratio: "16:9"
+  - path: "artifacts/mochi-bunny-games/public/images/lottie-screen-1.png"
+    description: "A cute pixel art virtual pet room with a pastel pink bunny, but the walls have faint creepy writing scratched into them. Pastel kawaii horror aesthetic."
+    aspect_ratio: "4:3"
+  - path: "artifacts/mochi-bunny-games/public/images/lottie-screen-2.png"
+    description: "A close-up of a cute anime girl eye with pink pastel aesthetics, but the pupil is shaped like an unsettling dark black spiral."
+    aspect_ratio: "4:3"
+  - path: "artifacts/mochi-bunny-games/public/images/lottie-screen-3.png"
+    description: "A glitched out pastel pink bedroom, dark shadows dominating the corners, an empty cage in the center. Unsettling dreamcore aesthetic."
+    aspect_ratio: "4:3"
+
+notes:
+  - Simulating all backend endpoints with React Query and mock data delays.
+  - The cursor and particle effects are DOM-based for performance.

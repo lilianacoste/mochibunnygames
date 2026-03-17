@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "MochiBunnyGames"
+version = "1.0.0"
+id = "artifacts/mochi-bunny-games"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+localPort = 24523
+name = "web"
+paths = ["/"]
+
+[services.development]
+run = "pnpm --filter @workspace/mochi-bunny-games run dev"
+
+[services.env]
+PORT = "24523"
+BASE_PATH = "/"
+
+[services.production]
+build = ["pnpm", "--filter", "@workspace/mochi-bunny-games", "run", "build"]
+publicDir = "artifacts/mochi-bunny-games/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
