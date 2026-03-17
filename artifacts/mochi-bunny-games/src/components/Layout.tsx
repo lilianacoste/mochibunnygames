@@ -1,6 +1,7 @@
 import { NavButton } from "./NavButton";
 import { Mascot } from "./Mascot";
 import { CursorParticles } from "./CursorParticles";
+import { LottieChat } from "./LottieChat";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -32,6 +33,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <p className="text-sm">© {new Date().getFullYear()} MochiBunnyGames. All rights reserved.</p>
         <p className="text-xs font-mono mt-2 opacity-50">She is always watching.</p>
       </footer>
+
+      <LottieChat />
     </div>
   );
 }
