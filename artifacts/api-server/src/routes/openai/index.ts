@@ -99,12 +99,13 @@ router.post("/conversations/:id/messages", async (req, res) => {
 
     let fullResponse = "";
 
+    console.log("[lottie] calling AI with", chatMessages.length, "messages");
+
     const stream = await openai.chat.completions.create({
-      model: "gpt-5-mini",
-      max_completion_tokens: 200,
+      model: "gpt-5",
       messages: [{ role: "system", content: SYSTEM_PROMPT }, ...chatMessages],
       stream: true,
-    });
+    } as any);
 
     for await (const chunk of stream) {
       const content = chunk.choices[0]?.delta?.content;
@@ -114,18 +115,24 @@ router.post("/conversations/:id/messages", async (req, res) => {
       }
     }
 
-    await db.insert(messages).values({
-      conversationId: convId,
-      role: "assistant",
-      content: fullResponse,
-    });
+    console.log("[lottie] response length:", fullResponse.length);
+
+    if (fullResponse) {
+      await db.insert(messages).values({
+        conversationId: convId,
+        role: "assistant",
+        content: fullResponse,
+      });
+    }
 
     res.write(`data: ${JSON.stringify({ done: true })}\n\n`);
     res.end();
   } catch (err) {
-    console.error(err);
-    res.write(`data: ${JSON.stringify({ error: "Lottie couldn't respond." })}\n\n`);
-    res.end();
+    console.error("[lottie] ERROR:", err);
+    try {
+      res.write(`data: ${JSON.stringify({ error: "Lottie couldn't respond." })}\n\n`);
+      res.end();
+    } catch (_) {}
   }
 });
 
