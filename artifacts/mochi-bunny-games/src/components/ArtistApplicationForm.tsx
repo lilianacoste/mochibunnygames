@@ -123,19 +123,23 @@ export default function ArtistApplicationForm() {
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
+            id="artist-name"
             name="name"
             value={form.name}
             onChange={handleChange}
             placeholder="name / alias"
+            autoComplete="name"
             required
             className="w-full rounded-xl border border-pink-200 bg-pink-50/70 px-4 py-3 text-foreground outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/20"
           />
 
           <div className="grid gap-4 md:grid-cols-2">
             <select
+              id="artist-role"
               name="role"
               value={form.role}
               onChange={handleChange}
+              autoComplete="organization-title"
               required
               className="w-full rounded-xl border border-pink-200 bg-pink-50/70 px-4 py-3 text-foreground outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/20"
             >
@@ -152,9 +156,11 @@ export default function ArtistApplicationForm() {
             </select>
 
             <select
+              id="artist-style"
               name="style"
               value={form.style}
               onChange={handleChange}
+              autoComplete="off"
               className="w-full rounded-xl border border-pink-200 bg-pink-50/70 px-4 py-3 text-foreground outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/20"
             >
               <option value="">primary specialty</option>
@@ -174,10 +180,12 @@ export default function ArtistApplicationForm() {
           </div>
 
           <input
+            id="artist-portfolio"
             name="portfolio"
             value={form.portfolio}
             onChange={handleChange}
             placeholder="portfolio link"
+            autoComplete="url"
             required
             className="w-full rounded-xl border border-pink-200 bg-pink-50/70 px-4 py-3 text-foreground outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/20"
           />
@@ -195,9 +203,13 @@ export default function ArtistApplicationForm() {
                   }`}
                 >
                   <input
+                    id={`artist-style-${item.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
                     type="checkbox"
+                    name="styles"
+                    value={item}
                     checked={styles.includes(item)}
                     onChange={() => toggleStyle(item)}
+                    autoComplete="off"
                     className="h-4 w-4 accent-pink-500"
                   />
                   {item}
@@ -207,45 +219,55 @@ export default function ArtistApplicationForm() {
           </div>
 
           <textarea
+            id="artist-why"
             name="why"
             value={form.why}
             onChange={handleChange}
             placeholder="why do you want to help, and which horror references fit your work?"
+            autoComplete="off"
             rows={4}
             className="w-full rounded-xl border border-pink-200 bg-pink-50/70 px-4 py-3 text-foreground outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/20"
           />
 
           <div className="grid gap-4 md:grid-cols-3">
             <input
+              id="artist-availability"
               name="availability"
               value={form.availability}
               onChange={handleChange}
               placeholder="availability"
+              autoComplete="off"
               className="w-full rounded-xl border border-pink-200 bg-pink-50/70 px-4 py-3 text-foreground outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/20"
             />
 
             <input
+              id="artist-years"
               name="years"
               value={form.years}
               onChange={handleChange}
               placeholder="years of experience"
+              autoComplete="off"
               className="w-full rounded-xl border border-pink-200 bg-pink-50/70 px-4 py-3 text-foreground outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/20"
             />
 
             <input
+              id="artist-pricing"
               name="pricing"
               value={form.pricing}
               onChange={handleChange}
               placeholder="pricing / open to discuss"
+              autoComplete="off"
               className="w-full rounded-xl border border-pink-200 bg-pink-50/70 px-4 py-3 text-foreground outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/20"
             />
           </div>
 
           <input
+            id="artist-contact"
             name="contact"
             value={form.contact}
             onChange={handleChange}
             placeholder="discord or email"
+            autoComplete="email"
             required
             className="w-full rounded-xl border border-pink-200 bg-pink-50/70 px-4 py-3 text-foreground outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/20"
           />

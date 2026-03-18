@@ -1,47 +1,8 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { useSubscribe } from "@/hooks/use-mock-api";
 import { GlitchText } from "@/components/GlitchText";
-import { Mail, MessageSquare, Loader2, Heart } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
-import confetti from "canvas-confetti";
+import { Mail, MessageSquare, Heart } from "lucide-react";
 
 export default function Community() {
-  const [email, setEmail] = useState("");
-  const { mutate, isPending } = useSubscribe();
-  const { toast } = useToast();
-
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) return;
-
-    mutate(email, {
-      onSuccess: () => {
-        // Fire creepy confetti (dark reds and blacks mixed with pink)
-        confetti({
-          particleCount: 100,
-          spread: 70,
-          origin: { y: 0.6 },
-          colors: ['#ffb6c1', '#ff69b4', '#8b0000', '#000000']
-        });
-        
-        toast({
-          title: "You are on the list.",
-          description: "She knows your email now. Thank you.",
-          variant: "default",
-        });
-        setEmail("");
-      },
-      onError: () => {
-        toast({
-          title: "Error",
-          description: "Invalid format. She couldn't read it.",
-          variant: "destructive",
-        });
-      }
-    });
-  };
-
   return (
     <div className="py-12 max-w-5xl mx-auto">
       <motion.div
@@ -69,16 +30,13 @@ export default function Community() {
           <p className="text-white/80 mb-8">
             Chat with other players, share fan art, and report "bugs". The devs are always listening. So is she.
           </p>
-          
-          <button 
-            onClick={() => window.open('https://discord.com', '_blank')}
-            className="w-full bg-white text-[#5865F2] hover:bg-gray-100 font-bold py-4 rounded-xl transition-all duration-200 hover:shadow-xl hover:-translate-y-1 active:translate-y-0"
-          >
-            Join Server
-          </button>
+
+          <div className="w-full rounded-xl bg-white/15 px-6 py-4 text-center font-bold tracking-wide">
+            coming soon
+          </div>
         </motion.div>
 
-        {/* Newsletter Card */}
+        {/* Updates Card */}
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -90,30 +48,15 @@ export default function Community() {
             Get notified when <GlitchText text="Lottie wakes up" />
           </h3>
           <p className="text-muted-foreground mb-8">
-            Sign up for the newsletter to get exclusive beta access and updates. We promise not to spam you.
+            Email signups are paused for now while I rework how updates and beta access will be handled.
           </p>
-          
-          <form onSubmit={handleSubscribe} className="flex flex-col gap-4">
-            <input
-              type="email"
-              placeholder="your@email.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              disabled={isPending}
-              className="px-6 py-4 bg-gray-50 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all text-foreground"
-            />
-            <button 
-              type="submit"
-              disabled={isPending}
-              className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl transition-all duration-200 hover:shadow-kawaii hover:-translate-y-1 active:translate-y-0 disabled:opacity-70 disabled:hover:transform-none disabled:hover:shadow-none flex justify-center items-center gap-2"
-            >
-              {isPending ? (
-                <><Loader2 className="animate-spin" size={20}/> Processing...</>
-              ) : (
-                'Subscribe to updates'
-              )}
-            </button>
-          </form>
+
+          <div className="rounded-xl border-2 border-dashed border-primary/30 bg-primary/5 px-6 py-8 text-center">
+            <p className="text-lg font-bold text-foreground">coming soon</p>
+            <p className="mt-2 text-sm text-muted-foreground">
+              follow-up updates will come back once the community rollout is ready.
+            </p>
+          </div>
         </motion.div>
 
       </div>

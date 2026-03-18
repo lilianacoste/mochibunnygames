@@ -13,6 +13,8 @@ export function Mascot({ className }: { className?: string }) {
       }, 3000);
       return () => clearTimeout(t);
     }
+
+    return undefined;
   }, [clickCount]);
 
   return (

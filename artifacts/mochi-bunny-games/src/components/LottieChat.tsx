@@ -437,11 +437,14 @@ export function LottieChat() {
 
             <div className="flex gap-2 border-t border-pink-100 bg-white p-3">
               <input
+                id="lottie-chat-input"
                 type="text"
+                name="message"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={handleKey}
                 placeholder="say something..."
+                autoComplete="off"
                 disabled={loading}
                 className="flex-1 rounded-xl border border-pink-200 bg-pink-50 px-4 py-2.5 text-sm text-foreground transition-all placeholder:text-pink-300 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30"
               />
