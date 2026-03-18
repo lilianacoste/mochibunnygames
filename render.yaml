@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: mochi-bunny-games
+    runtime: node
+    plan: free
+    branch: main
+    autoDeployTrigger: commit
+    buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm --filter @workspace/mochi-bunny-games build && pnpm --filter @workspace/api-server build
+    startCommand: node artifacts/api-server/dist/index.cjs
+    healthCheckPath: /api/healthz
+    envVars:
+      - key: AI_INTEGRATIONS_OPENAI_BASE_URL
+        sync: false
+      - key: AI_INTEGRATIONS_OPENAI_API_KEY
+        sync: false
+      - key: DATABASE_URL
+        sync: false
