@@ -25,6 +25,7 @@ export interface CreateOpenaiConversationBody {
 
 export interface SendOpenaiMessageBody {
   content: string;
+  seenBefore?: boolean;
 }
 
 export interface OpenaiConversationWithMessages {

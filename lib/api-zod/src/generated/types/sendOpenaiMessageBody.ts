@@ -8,4 +8,5 @@
 
 export interface SendOpenaiMessageBody {
   content: string;
+  seenBefore?: boolean;
 }

@@ -41,7 +41,18 @@ export default function Games() {
 
             <div className="space-y-4 text-foreground/80 relative z-10">
               <p>
-                Adopt Lottie, a sweet little mochi bunny who lives right on your desktop! Feed her, play mini-games, and decorate her room with adorable pastel furniture.
+              Welcome to Haybridge.
+ A prestigious university at the forefront of artificial intelligence, innovation, and academic excellence.
+Every student is assigned a LUX-Core an advanced AI assistant designed to help with classes, assignments, and campus life.
+Yours is different.
+It doesn’t just assist.
+ It watches.
+ It remembers.
+ And somehow… it needs you.
+By day, attend lectures, complete tasks, and navigate student life at Haybridge.
+ By night, uncover unfamiliar signals, corrupted systems, and a presence that seems to be watching your every move.
+As your LUX-Core begins to behave in ways it shouldn’t, you’ll have to explore, investigate, and uncover the secrets hidden within Haybridge.
+
               </p>
               <p>
                 She remembers everything you tell her. She knows when you leave. She knows what files you have open.
@@ -58,44 +69,24 @@ export default function Games() {
           </div>
         </motion.div>
 
-        {/* Right Column: Polaroids */}
+        {/* Right Column: Haybridge OS Desktop */}
         <motion.div 
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.4 }}
-          className="relative h-[600px] flex justify-center items-center"
+          className="flex flex-col justify-center items-center gap-6"
         >
-          {/* Polaroid 1 */}
-          <div className="absolute w-64 polaroid -rotate-6 shadow-kawaii z-10 top-0 left-0 xl:-left-12">
+          <div className="bg-gradient-to-b from-gray-900 to-gray-800 rounded-lg border-8 border-gray-700 shadow-2xl overflow-hidden">
             <img 
-              src={`${import.meta.env.BASE_URL}images/lottie-screen-1.png`}
-              alt="Lottie room"
-              className="w-full h-auto aspect-4/3 object-cover bg-gray-100"
+              src={`${import.meta.env.BASE_URL}images/haybridgeOS.png`}
+              alt="Haybridge OS Portal"
+              className="w-full h-auto"
             />
-            <p className="text-center font-mono text-xs mt-4 text-gray-500 italic handwriting">nothing wrong here :)</p>
           </div>
-
-          {/* Polaroid 2 */}
-          <div className="absolute w-64 polaroid rotate-3 shadow-kawaii z-20 top-32 right-0 xl:-right-8">
-            <img 
-              src={`${import.meta.env.BASE_URL}images/lottie-screen-2.png`}
-              alt="Lottie eye"
-              className="w-full h-auto aspect-4/3 object-cover bg-gray-100"
-            />
-            <p className="text-center font-mono text-xs mt-4 text-destructive italic handwriting">she only watches sometimes</p>
-          </div>
-
-          {/* Polaroid 3 */}
-          <div className="absolute w-64 polaroid -rotate-3 shadow-kawaii z-30 bottom-0 left-12">
-            <img 
-              src={`${import.meta.env.BASE_URL}images/lottie-screen-3.png`}
-              alt="Lottie dark room"
-              className="w-full h-auto aspect-4/3 object-cover bg-gray-100 grayscale hover:grayscale-0 transition-all duration-700"
-            />
-            <p className="text-center font-mono text-xs mt-4 text-gray-500 italic handwriting">
-              <GlitchText text="where did she go?" />
-            </p>
-          </div>
+          <p className="text-center font-mono text-sm text-gray-600 italic max-w-sm">
+            <GlitchText text="Welcome to Haybridge. Where everything is supervised." />
+          </p>
+          <p className="text-center font-mono text-xs text-muted-foreground">more images coming soon :)</p>
         </motion.div>
 
       </div>

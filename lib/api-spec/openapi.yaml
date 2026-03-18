@@ -189,6 +189,8 @@ components:
       properties:
         content:
           type: string
+        seenBefore:
+          type: boolean
       required:
         - content
     OpenaiConversationWithMessages:
@@ -224,4 +226,3 @@ components:
           type: string
       required:
         - status
-

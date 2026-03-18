@@ -8,6 +8,7 @@ import Home from "@/pages/Home";
 import Games from "@/pages/Games";
 import Devlog from "@/pages/Devlog";
 import Community from "@/pages/Community";
+import Artists from "@/pages/Artists";
 import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient();
@@ -17,6 +18,7 @@ function Router() {
     <Layout>
       <Switch>
         <Route path="/" component={Home} />
+        <Route path="/artists" component={Artists} />
         <Route path="/games" component={Games} />
         <Route path="/devlog" component={Devlog} />
         <Route path="/community" component={Community} />
