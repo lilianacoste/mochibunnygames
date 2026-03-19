@@ -133,6 +133,44 @@ export default function Home() {
             </div>
           </div>
         </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="mx-auto mb-16 max-w-5xl"
+        >
+          <div className="relative overflow-hidden rounded-[2rem] border-4 border-white bg-gradient-to-br from-white via-pink-50 to-pink-100 p-8 shadow-kawaii md:p-10">
+            <div className="absolute -left-8 top-0 h-32 w-32 rounded-full bg-primary/10 blur-3xl" />
+            <div className="absolute bottom-0 right-0 h-40 w-40 rounded-full bg-secondary/20 blur-3xl" />
+
+            <div className="relative z-10 max-w-3xl">
+              <p className="mb-3 font-mono text-xs uppercase tracking-[0.35em] text-primary">
+                About Me
+              </p>
+              <h3 className="mb-4 text-3xl font-bold leading-tight text-foreground md:text-4xl">
+                Hello &lt;3
+              </h3>
+              <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
+                <p>
+                  I&apos;m a computer science graduate student and solo indie developer
+                  focused on creating games that feel meaningful, unsettling, and
+                  memorable.
+                </p>
+                <p>
+                  I&apos;m especially drawn to projects that blend strong narrative design
+                  with interactive systems: games where the experience stays with you
+                  even after you&apos;ve closed them. My work explores psychological horror,
+                  liminal spaces, and the relationship between player and system.
+                </p>
+                <p>
+                  I handle everything from design and programming to implementation,
+                  building projects from concept to playable experience.
+                </p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </motion.div>
     </div>
   );

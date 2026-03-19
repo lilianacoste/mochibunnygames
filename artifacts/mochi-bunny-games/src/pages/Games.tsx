@@ -29,7 +29,7 @@ export default function Games() {
             
             <div className="flex flex-wrap gap-2 mb-6 relative z-10">
               <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-bold flex items-center gap-1">
-                <Heart size={14} /> Virtual Pet
+                <Heart size={14} /> Point & Click
               </span>
               <span className="px-3 py-1 bg-secondary/30 text-secondary-foreground rounded-full text-sm font-bold flex items-center gap-1">
                 <Gamepad2 size={14} /> Puzzle

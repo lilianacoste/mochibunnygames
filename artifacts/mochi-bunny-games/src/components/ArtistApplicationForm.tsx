@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Loader2 } from "lucide-react";
 
 const SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbxZYE9L_--3vcK1Zbrrqan99RqdwdRwGxM2WclifNzS8tnD-V2EAqzLeQueqQxHGXy0QQ/exec";
+  "https://script.google.com/macros/s/AKfycbyrbELQB4WZdQwGjwuz4_zEn0dh6Q4Jn8Qf24dDIuXrsMyHRhxyryjJopih5eFN2TYttQ/exec";
 
 const STYLE_OPTIONS = [
   "Analog Horror",
@@ -78,7 +78,15 @@ export default function ArtistApplicationForm() {
         throw new Error(`Submission failed with status ${res.status}.`);
       }
 
-      await res.text();
+      const result = (await res.json()) as {
+        success?: boolean;
+        error?: string;
+        row?: number;
+      };
+
+      if (!result.success) {
+        throw new Error(result.error || "Submission was not saved.");
+      }
 
       setSubmitted(true);
       setForm({
@@ -95,7 +103,9 @@ export default function ArtistApplicationForm() {
       setStyles([]);
     } catch (err) {
       console.error(err);
-      setError("something went wrong sending your form.");
+      setError(
+        err instanceof Error ? err.message : "something went wrong sending your form.",
+      );
     } finally {
       setLoading(false);
     }
@@ -107,20 +117,6 @@ export default function ArtistApplicationForm() {
       <div className="absolute -bottom-10 -left-8 h-32 w-32 rounded-full bg-secondary/20 blur-2xl" />
 
       <div className="relative z-10">
-        <div className="mb-8">
-          <p className="mb-2 font-mono text-xs uppercase tracking-[0.35em] text-primary">
-            Artist Call
-          </p>
-          <h2 className="mb-2 text-3xl font-bold text-foreground md:text-4xl">
-            Looking for artists
-          </h2>
-          <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base">
-            I&apos;m looking for 3D artists who can render static horror environments and
-            2D artists who can animate dialogue avatars. The target is analog horror,
-            liminal interiors, surveillance-camera framing, and hyperreal uncanny humans.
-          </p>
-        </div>
-
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
             id="artist-name"
