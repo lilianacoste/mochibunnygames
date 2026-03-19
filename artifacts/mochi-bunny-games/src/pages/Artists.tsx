@@ -43,7 +43,7 @@ const avatarDetails = [
 
 export default function Artists() {
   return (
-    <div className="mx-auto max-w-6xl py-12">
+    <div className="mx-auto max-w-6xl py-10 md:py-12">
       <motion.div
         initial={{ opacity: 0, y: 18 }}
         animate={{ opacity: 1, y: 0 }}
@@ -58,21 +58,20 @@ export default function Artists() {
         </Link>
 
         <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
-          <div className="rounded-[2rem] border-4 border-white bg-gradient-to-br from-white via-pink-50 to-pink-100 p-8 shadow-kawaii">
+          <div className="rounded-[2rem] border-4 border-white bg-gradient-to-br from-white via-pink-50 to-pink-100 p-6 shadow-kawaii sm:p-8">
             <p className="mb-3 font-mono text-xs uppercase tracking-[0.35em] text-primary">
               MochiBunnyGames
             </p>
-            <h2 className="mb-4 text-4xl font-bold leading-tight md:text-5xl">
-              Looking for 3D horror environment artists and
-              {" "}
+            <h2 className="mb-4 text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
+              Looking for 3D horror environment artists and{" "}
               <span className="text-primary">2D avatar animators</span>
             </h2>
             <p className="max-w-2xl text-base leading-relaxed text-muted-foreground">
               I&apos;m building a psychological horror game with analog horror,
               liminal-space tension, surveillance-camera framing, and unsettling dialogue
-              scenes. I&apos;m especially looking for static 3D environment renders, hyperreal
-              uncanny human models, and animated 2D dialogue avatars. Compensation can be
-              paid, rev-share, or hybrid depending on scope.
+              scenes. I&apos;m especially looking for static 3D environment renders,
+              hyperreal uncanny human models, and animated 2D dialogue avatars.
+              Compensation can be paid, rev-share, or hybrid depending on scope.
             </p>
           </div>
 

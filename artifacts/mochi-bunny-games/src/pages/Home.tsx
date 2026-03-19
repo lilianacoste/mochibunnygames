@@ -6,8 +6,7 @@ import { Link } from "wouter";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center pt-12 md:pt-24">
-      {/* Decorative background sparkles */}
+    <div className="flex flex-col items-center pt-8 sm:pt-12 md:pt-24">
       <Sparkle delay={0} size={30} style={{ top: "20%", left: "10%" }} />
       <Sparkle delay={500} size={20} style={{ top: "60%", right: "15%" }} />
       <Sparkle delay={1000} size={40} style={{ top: "15%", right: "20%" }} />
@@ -20,36 +19,40 @@ export default function Home() {
         className="relative z-10 w-full max-w-6xl"
       >
         <div className="text-center">
-          <h2 className="text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight">
+          <h2 className="mb-5 text-4xl font-bold leading-tight text-foreground sm:text-5xl md:mb-6 md:text-7xl">
             Crafting <span className="text-primary">cute</span> experiences for your desktop.
           </h2>
 
-          <div className="font-mono text-xl md:text-2xl text-muted-foreground mb-12 h-8">
+          <div className="mb-8 min-h-10 font-mono text-base text-muted-foreground sm:mb-12 sm:text-xl md:h-8 md:text-2xl">
             <GlitchText text="A cozy companion... that's watching you back." />
           </div>
         </div>
 
-        <div className="relative group mx-auto max-w-4xl mt-12 mb-20">
-          <div className="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-primary rounded-[2rem] blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+        <div className="group relative mx-auto mt-8 mb-14 max-w-4xl sm:mt-12 sm:mb-20">
+          <div className="absolute -inset-1 rounded-[2rem] bg-gradient-to-r from-primary via-secondary to-primary opacity-25 blur transition duration-1000 group-hover:opacity-50 group-hover:duration-200"></div>
 
-          <div className="relative bg-white rounded-[2rem] border-4 border-white shadow-kawaii overflow-hidden">
+          <div className="relative overflow-hidden rounded-[2rem] border-4 border-white bg-white shadow-kawaii">
             <img
               src={`${import.meta.env.BASE_URL}images/Lottiedesktop.png`}
               alt="Project Lottie.exe desktop environment"
-              className="w-full object-cover aspect-video"
+              className="aspect-video w-full object-cover"
             />
 
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex flex-col justify-end p-8">
-              <div className="flex justify-between items-end">
+            <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 via-transparent to-transparent p-5 sm:p-8">
+              <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-end sm:justify-between">
                 <div>
-                  <span className="px-3 py-1 bg-primary/90 text-white rounded-full text-xs font-bold tracking-wider mb-3 inline-block">IN DEVELOPMENT</span>
-                  <h3 className="text-3xl font-bold text-white mb-2"><GlitchText text="Project Lottie.exe" /></h3>
-                  <p className="text-white/80 font-medium">Your new best friend is waiting to play.</p>
+                  <span className="mb-3 inline-block rounded-full bg-primary/90 px-3 py-1 text-xs font-bold tracking-wider text-white">
+                    IN DEVELOPMENT
+                  </span>
+                  <h3 className="mb-2 text-2xl font-bold text-white sm:text-3xl">
+                    <GlitchText text="Project Lottie.exe" />
+                  </h3>
+                  <p className="font-medium text-white/80">Your new best friend is waiting to play.</p>
                 </div>
 
                 <Link
                   href="/games"
-                  className="bg-white text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-xl font-bold transition-colors flex items-center gap-2 shadow-lg"
+                  className="flex w-full items-center justify-center gap-2 rounded-xl bg-white px-6 py-3 font-bold text-primary shadow-lg transition-colors hover:bg-primary hover:text-white sm:w-auto"
                 >
                   Learn More <ArrowRight size={18} />
                 </Link>
@@ -64,7 +67,7 @@ export default function Home() {
           transition={{ delay: 0.2 }}
           className="mx-auto mb-12 grid max-w-5xl gap-6 lg:grid-cols-[1.15fr_0.85fr]"
         >
-          <div className="relative overflow-hidden rounded-[2rem] border-4 border-pink-200 bg-white p-8 text-left shadow-kawaii">
+          <div className="relative overflow-hidden rounded-[2rem] border-4 border-pink-200 bg-white p-6 text-left shadow-kawaii sm:p-8">
             <div className="absolute -right-10 top-0 h-40 w-40 rounded-full bg-primary/10 blur-3xl" />
             <div className="absolute bottom-0 left-0 h-32 w-32 rounded-full bg-secondary/20 blur-3xl" />
 
@@ -74,21 +77,17 @@ export default function Home() {
                 Looking for artists
               </div>
 
-              <h3 className="mb-4 max-w-2xl text-3xl font-bold leading-tight text-foreground md:text-4xl">
-                Looking for artists who can build
-                {" "}
-                <span className="text-primary">uncanny</span>
-                {" "}
-                spaces and faces.
+              <h3 className="mb-4 max-w-2xl text-2xl font-bold leading-tight text-foreground sm:text-3xl md:text-4xl">
+                Looking for artists who can build <span className="text-primary">uncanny</span> spaces and faces.
               </h3>
               <p className="mb-6 max-w-2xl text-base leading-relaxed text-muted-foreground">
-                I&apos;m currently looking for 3D environment artists creating static
-                horror scenes, as well as 2D avatar animators and character artists
-                for dialogue. Think liminal hallways, surveillance-camera angles, and
-                environments that feel wrong even when nothing is moving, alongside
-                characters that range from soft and kawaii to subtly unsettling and
-                uncanny. Inspired by FNAF, Outlast, and backrooms-style unease, with a
-                focus on both environments and faces that don&apos;t feel quite right.
+                I&apos;m currently looking for 3D environment artists creating static horror
+                scenes, as well as 2D avatar animators and character artists for dialogue.
+                Think liminal hallways, surveillance-camera angles, and environments that
+                feel wrong even when nothing is moving, alongside characters that range
+                from soft and kawaii to subtly unsettling and uncanny. Inspired by FNAF,
+                Outlast, and backrooms-style unease, with a focus on both environments and
+                faces that don&apos;t feel quite right.
               </p>
 
               <Link
@@ -108,11 +107,11 @@ export default function Home() {
               </div>
               <h4 className="mb-2 text-lg font-bold text-foreground">Mood first</h4>
               <p className="text-sm leading-relaxed text-muted-foreground">
-                I&apos;m chasing analog horror, liminal interiors, dark apartment
-                corridors, and surveillance-style camera spaces. At the same time,
-                character visuals are just as important, from cute, expressive 2D
-                avatars to uncanny, almost-real faces used in horror moments.
-                Everything should feel slightly off, even when nothing is happening.
+                I&apos;m chasing analog horror, liminal interiors, dark apartment corridors,
+                and surveillance-style camera spaces. At the same time, character visuals
+                are just as important, from cute, expressive 2D avatars to uncanny,
+                almost-real faces used in horror moments. Everything should feel slightly
+                off, even when nothing is happening.
               </p>
             </div>
 
@@ -127,8 +126,8 @@ export default function Home() {
                 <li>Artists who can create hyperreal or uncanny human faces.</li>
               </ul>
               <p className="mt-3 text-sm leading-relaxed text-foreground/80">
-                If your work sits anywhere between cute and unsettling, you&apos;ll likely
-                fit this project well.
+                If your work sits anywhere between cute and unsettling, you&apos;ll likely fit
+                this project well.
               </p>
             </div>
           </div>
@@ -140,7 +139,7 @@ export default function Home() {
           transition={{ delay: 0.3 }}
           className="mx-auto mb-16 max-w-5xl"
         >
-          <div className="relative overflow-hidden rounded-[2rem] border-4 border-white bg-gradient-to-br from-white via-pink-50 to-pink-100 p-8 shadow-kawaii md:p-10">
+          <div className="relative overflow-hidden rounded-[2rem] border-4 border-white bg-gradient-to-br from-white via-pink-50 to-pink-100 p-6 shadow-kawaii sm:p-8 md:p-10">
             <div className="absolute -left-8 top-0 h-32 w-32 rounded-full bg-primary/10 blur-3xl" />
             <div className="absolute bottom-0 right-0 h-40 w-40 rounded-full bg-secondary/20 blur-3xl" />
 
@@ -148,20 +147,19 @@ export default function Home() {
               <p className="mb-3 font-mono text-xs uppercase tracking-[0.35em] text-primary">
                 About Me
               </p>
-              <h3 className="mb-4 text-3xl font-bold leading-tight text-foreground md:text-4xl">
+              <h3 className="mb-4 text-2xl font-bold leading-tight text-foreground sm:text-3xl md:text-4xl">
                 Hello &lt;3
               </h3>
               <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
                 <p>
-                  I&apos;m a computer science graduate student and solo indie developer
-                  focused on creating games that feel meaningful, unsettling, and
-                  memorable.
+                  I&apos;m a computer science graduate student and solo indie developer focused
+                  on creating games that feel meaningful, unsettling, and memorable.
                 </p>
                 <p>
-                  I&apos;m especially drawn to projects that blend strong narrative design
-                  with interactive systems: games where the experience stays with you
-                  even after you&apos;ve closed them. My work explores psychological horror,
-                  liminal spaces, and the relationship between player and system.
+                  I&apos;m especially drawn to projects that blend strong narrative design with
+                  interactive systems: games where the experience stays with you even after
+                  you&apos;ve closed them. My work explores psychological horror, liminal
+                  spaces, and the relationship between player and system.
                 </p>
                 <p>
                   I handle everything from design and programming to implementation,
